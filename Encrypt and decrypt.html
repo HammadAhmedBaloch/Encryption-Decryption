@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Audiowide|Special+Elite" rel="stylesheet">
+	<link rel="stylesheet" href="enc & dec.css">
+	<title>Document</title>
+</head>
+
+<body>
+	<h4 id="u-heading">User Message :</h4>
+	<input type="text" name="user-msg" id="usr-msg">
+	<button id="enc-btn" onclick="encryptMsg()" class="zoomIn animated"><span id="enc-span">Encrypt</span><i class="fas fa-database"></i><i
+			class="fas fa-lock"></i></button>
+	<br>
+	<h4 class="heading-enc"> Encrypted Message :</h4>
+	<div id="enc-div" class="enc-div-hidden">
+		<span id="encrypt-msg"></span>
+		<button onclick="decryptMsg()" id="decBtn" class="hidden"><span id="dec-span">Decrypt</span><i
+				class="fas fa-database"></i><i class="fas fa-lock-open"></i></button>
+	</div>
+	<br>
+	<h4 class="heading-dec">Original Message :</h4><span id="decrypt-msg" class="dec-msg-hidden"></span>
+	<script>
+		var encMsg;
+
+		function encryptMsg() {
+			var usrMsg = document.getElementById('usr-msg').value.toLowerCase();
+			var space = String.fromCharCode(32);
+
+
+			var dict = {
+				a: 'z',
+				b: 'y',
+				c: 'x',
+				d: 'w',
+				e: 'v',
+				f: 'u',
+				g: 't',
+				h: 's',
+				i: 'r',
+				j: 'q',
+				k: 'p',
+				l: 'o',
+				m: 'n',
+				n: 'm',
+				o: 'l',
+				p: 'k',
+				q: 'j',
+				r: 'i',
+				s: 'h',
+				t: 'g',
+				u: 'f',
+				v: 'e',
+				w: 'd',
+				x: 'c',
+				y: 'b',
+				z: 'a',
+				' ': "-"
+			};
+			var encrypted = "";
+			for (var i = 0; i < usrMsg.length; i++) {
+				encrypted += dict[usrMsg[i]];
+				if(usrMsg[i] === " "){
+					encryptMsg += "-";
+				}
+			
+
+			}
+			encMsg = document.getElementById('encrypt-msg').textContent = encrypted;
+			document.getElementById('usr-msg').value = '';
+			document.getElementById('enc-div').className = "enc-div-show bounceIn animated";
+
+			document.getElementById('decBtn').className = "shown bounceInLeft animated";
+		}
+
+		function decryptMsg() {
+
+
+			var dict = {
+				z: 'a',
+				y: 'b',
+				x: 'c',
+				w: 'd',
+				v: 'e',
+				u: 'f',
+				t: 'g',
+				s: 'h',
+				r: 'i',
+				q: 'j',
+				p: 'k',
+				o: 'l',
+				n: 'm',
+				m: 'n',
+				l: 'o',
+				k: 'p',
+				j: 'q',
+				i: 'r',
+				h: 's',
+				g: 't',
+				f: 'u',
+				e: 'v',
+				d: 'w',
+				c: 'x',
+				b: 'y',
+				a: 'z',
+				'-': ' '
+			};
+			decrypted = '';
+			for (var i = 0; i < encMsg.length; i++) {
+				decrypted += dict[encMsg[i]];
+
+			}
+			var decMsg = document.getElementById('decrypt-msg').textContent = decrypted;
+			document.getElementById('decrypt-msg').className = "dec-msg-show bounceIn animated";
+
+		}
+
+
+	</script>
+</body>
+
+</html>

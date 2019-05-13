@@ -1,0 +1,140 @@
+#usr-msg {
+	width: 400px;
+	height: 30px;
+	border-radius: 25px;
+	outline: none;
+	border: 2px solid #c8c8c8;
+	font-family: 'Special Elite', cursive;
+	padding-left: 10px;
+	font-size: 18px;
+	position: relative;
+    left: 90px;
+}
+
+#enc-btn {
+	height: 33px;
+	width: 111px;
+	position: relative;
+	right: 25px;
+	top: 1.6px;
+	border-radius: 25px;
+	outline: none;
+	border: none;
+	box-sizing: border-box;
+	background-color: #07b7b7c9;
+}
+
+#enc-btn:hover {
+	transition: 1.5s;
+	background-color: #028686;
+}
+
+#enc-span {
+	font-family: 'Audiowide', cursive;
+	position: relative;
+	right: 3px;
+	font-size: 15px;
+	color: white;
+}
+
+.fa-database {
+	font-size: 16px;
+	position: relative;
+	left: 3px;
+	color: #f9f9f9;
+}
+
+.fa-lock {
+	font-size: 11px;
+	position: relative;
+	left: 3px;
+	color: #f9f9f9
+}
+
+.enc-div-hidden {
+	display: none;
+}
+
+.enc-div-show {
+	width: 410px;
+	height: 32px;
+	border-radius: 25px;
+	outline: none;
+	border: 2px solid #c8c8c8;
+	font-family: 'Special Elite', cursive;
+	font-size: 18px;
+	position: absolute;
+	left: 307px;
+	top: 86px;
+	display: inline-block;
+}
+
+
+#encrypt-msg {
+	position: absolute;
+	left: 10px;
+	top: 8px;
+}
+
+h4 {
+	display: inline-block;
+	font-family: 'Audiowide', cursive;
+	letter-spacing: 5px;
+}
+
+.hidden {
+	display: none;
+}
+
+.shown {
+	display: inline-block;
+	height: 35px;
+	width: 111px;
+	position: relative;
+	left: 300px;
+	bottom: 2px;
+	border-radius: 25px;
+	outline: none;
+	border: none;
+	background-color: #07b7b7c9;
+	font-family: 'Audiowide', cursive;
+	color: white;
+}
+
+#decBtn:hover {
+	transition: 1.5s;
+	background-color: #028686;
+}
+
+#dec-span {
+	font-family: 'Audiowide', cursive;
+	position: relative;
+	right: 3px;
+	font-size: 15px;
+	color: white;
+}
+.fa-lock-open{
+	position: relative;
+    left: 4px;
+    font-size: 11px;
+}
+.dec-msg-hidden{
+	display: none;
+}
+	
+.dec-msg-show{
+	width: 414px;
+    height: 36px;
+    border-radius: 25px;
+    outline: none;
+    border: 2px solid #c8c8c8;
+    font-family: 'Special Elite', cursive;
+    padding-left: 10px;
+    font-size: 18px;
+    padding-top: 7px;
+	position: absolute;
+    left: 310px;
+    top: 149px;
+    box-sizing: border-box;
+}
+	
